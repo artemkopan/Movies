@@ -28,5 +28,7 @@ dependencies {
     implementation project(':data')
     implementation project(':presentation')
 
-    implementation "org.koin:koin-core:$versions.koin"
+    implementation "org.koin:koin-android:$versions.koin"
+    implementation "com.jakewharton.timber:timber:$versions.timber"
+
 }

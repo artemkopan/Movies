@@ -47,5 +47,8 @@ versions.timber = '4.7.1'
 versions.crashlytics = '2.10.0'
 //endregion
 
+versions.threetenabp = "1.2.1"
+versions.gson = "2.8.5"
+
 versions.bintrayVersion = "1.0.0"
 ext.versions = versions

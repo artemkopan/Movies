@@ -4,6 +4,8 @@ dependencies {
     api "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$versions.kotlin_version"
     api "org.jetbrains.kotlinx:kotlinx-coroutines-core:$versions.kotlin_coroutines"
     api "androidx.annotation:annotation:$versions.androidx_annotations"
+
+    api "org.koin:koin-core:$versions.koin"
 }
 
 sourceCompatibility = "7"
