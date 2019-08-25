@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">presentation</string>
+    <string name="movies">Movies</string>
+    <string name="shows">TV Shows</string>
+    <string name="favorites">Favorites</string>
+    <string name="upcoming">Upcoming</string>
 </resources>

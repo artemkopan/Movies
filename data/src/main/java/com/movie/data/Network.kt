@@ -24,7 +24,7 @@ val network = module {
 
 
 inline fun <reified T> Scope.createWebService(): T {
-    return com.movie.data.createWebService((get() as SystemConfig).apiUrl, get(), get())
+    return createWebService((get() as SystemConfig).apiUrl, get(), get())
 }
 
 
@@ -42,7 +42,7 @@ fun baseRetrofitBuilder(url: String, okHttpClient: OkHttpClient, gson: Gson): Re
         .addConverterFactory(GsonConverterFactory.create(gson))
 }
 
-fun Scope.createGson(): Gson {
+fun createGson(): Gson {
     return GsonBuilder().create()
 }
 
@@ -57,14 +57,18 @@ private fun createOkHttpClient(): OkHttpClient {
         .writeTimeout(60, TimeUnit.SECONDS)
         .connectionPool(ConnectionPool(4, 1L, TimeUnit.MINUTES))
         .addNetworkInterceptor(
-            HttpLoggingInterceptor(HttpLoggingInterceptor.Logger { Logger.d("Okhttp", it) })
-                .setLevel(
-                    if (BuildConfig.DEBUG) {
+            HttpLoggingInterceptor(object : HttpLoggingInterceptor.Logger {
+                override fun log(message: String) {
+                    Logger.d("Okhttp", message)
+                }
+            })
+                .apply {
+                    this.level = if (BuildConfig.DEBUG) {
                         HttpLoggingInterceptor.Level.BODY
                     } else {
                         HttpLoggingInterceptor.Level.NONE
                     }
-                )
+                }
         )
         .build()
 }

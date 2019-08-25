@@ -1,5 +1,6 @@
 package com.movie.data.network.service
 
+import com.movie.data.network.response.GenreResponse
 import com.movie.data.network.response.MediaResponse
 import com.movie.data.network.response.ResultResponse
 import retrofit2.Call
@@ -14,5 +15,12 @@ interface ApiService {
         @Query("language") language: String,
         @Query("page") page: Int
     ): Call<ResultResponse<List<MediaResponse>>>
+
+
+    @GET("genre/movie/list")
+    fun getGenres(
+        @Query("api_key") apiKey: String,
+        @Query("language") language: String
+    ): Call<ResultResponse<List<GenreResponse>>>
 
 }

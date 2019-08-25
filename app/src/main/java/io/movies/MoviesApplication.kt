@@ -12,6 +12,7 @@ import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.startKoin
 import org.koin.core.logger.Level
 import org.koin.core.logger.MESSAGE
+import timber.log.Timber
 
 typealias KoinLogger = org.koin.core.logger.Logger
 
@@ -21,6 +22,7 @@ class MoviesApplication : Application() {
         super.onCreate()
         initDi()
 
+        Timber.plant(Timber.DebugTree())
         Logger.addPrinter(TimberPrinter())
     }
 

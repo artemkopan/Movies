@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="spacing1x">4dp</dimen>
+    <dimen name="spacing2x">8dp</dimen>
+    <dimen name="spacing3x">12dp</dimen>
+    <dimen name="spacing4x">16dp</dimen>
+    <dimen name="spacing5x">20dp</dimen>
+    <dimen name="spacing6x">24dp</dimen>
+    <dimen name="spacing7x">28dp</dimen>
+    <dimen name="spacing8x">32dp</dimen>
+    <dimen name="spacing9x">36dp</dimen>
+    <dimen name="spacing10x">40dp</dimen>
+
+
+    <dimen name="corner_bottom_nav">24dp</dimen>
+    <dimen name="corner_home_poster">12dp</dimen>
+
+
+</resources>

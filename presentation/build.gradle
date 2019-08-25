@@ -30,8 +30,11 @@ androidExtensions {
 dependencies {
     implementation project(':domain')
 
+
     implementation "ru.terrakok.cicerone:cicerone:$versions.cicerone"
 
+    implementation "androidx.core:core:$versions.androidx_core"
+    implementation "androidx.core:core-ktx:$versions.androidx_core"
     implementation "androidx.appcompat:appcompat:$versions.androidx_appcompat"
 
     implementation "androidx.navigation:navigation-runtime:$versions.navigation"
@@ -48,4 +51,7 @@ dependencies {
 
     implementation "org.koin:koin-android:$versions.koin"
     implementation "org.koin:koin-androidx-viewmodel:$versions.koin"
+
+    implementation "com.github.bumptech.glide:glide:$versions.glide"
+
 }

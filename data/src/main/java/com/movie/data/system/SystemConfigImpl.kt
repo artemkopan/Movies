@@ -9,6 +9,9 @@ class SystemConfigImpl(private val context: Context) : SystemConfig {
     override val apiUrl: String
         get() = "https://api.themoviedb.org/3/"
 
+    override val posterUrl: String
+        get() = "https://image.tmdb.org/t/p/original/"
+
     override val deviceLanguage: String
         get() = context.resources.configuration.run {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
