@@ -41,12 +41,12 @@ class MoviesPagerAdapter(private val resources: Resources) : RecyclerView.Adapte
 
         fun bind(media: Media) {
             Glide.with(movie_poster)
-                .load(media.raw.preview.source<String>())
+                .load(media.preview.source<String>())
                 .transform()
                 .transform(CenterCrop(), RoundedCorners(cornerRadius))
                 .transition(DrawableTransitionOptions.withCrossFade())
                 .into(movie_poster)
-            movie_title.text = media.raw.title
+            movie_title.text = media.title
             movie_genre.text = media.genres.joinToString { it.name }
         }
 

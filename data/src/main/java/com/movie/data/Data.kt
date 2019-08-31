@@ -18,7 +18,7 @@ val data = module {
     single<KeysProvider> { KeysProviderImpl(get()) }
     single<SystemConfig> { SystemConfigImpl(get()) }
 
-    factory<MediaHomeRepository> { MediaHomeRepositoryImpl(get(), get(), get(), get()) }
+    factory<MediaHomeRepository> { MediaHomeRepositoryImpl(get(), get(), get(), get(), get()) }
     factory<GenresRepository> { GenresRepositoryImpl(get(), get(), get(), get()) }
 
 }

@@ -3,12 +3,12 @@ package com.movie.presentation.features.home
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.movie.domain.entities.Media
-import com.movie.domain.features.home.GetMediaListUseCase
+import com.movie.domain.features.home.MediaHomeRepository
 import com.movie.presentation.base.AppViewModel
 import kotlinx.coroutines.launch
 
 class HomeViewModel(
-    private val getMediaListUseCase: GetMediaListUseCase
+    private val mediaHomeRepository: MediaHomeRepository
 ) : AppViewModel() {
 
 
@@ -18,7 +18,7 @@ class HomeViewModel(
 
     init {
         scope.launch(exceptionHandler { }) {
-            _mediaListLiveData.postValue(getMediaListUseCase.execute())
+            _mediaListLiveData.postValue(mediaHomeRepository.getMediaList())
         }
     }
 

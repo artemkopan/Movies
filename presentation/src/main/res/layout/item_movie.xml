@@ -4,15 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:paddingStart="@dimen/spacing4x"
+    tools:ignore="RtlSymmetry"
+    tools:padding="@dimen/spacing4x">
 
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/movie_poster"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginStart="@dimen/spacing4x"
-        android:layout_marginEnd="@dimen/spacing4x"
         android:layout_marginBottom="@dimen/spacing4x"
         app:layout_constraintBottom_toTopOf="@+id/movie_title"
         app:layout_constraintEnd_toEndOf="parent"
@@ -25,8 +26,6 @@
         android:id="@+id/movie_title"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/spacing4x"
-        android:layout_marginEnd="@dimen/spacing4x"
         android:layout_marginBottom="@dimen/spacing1x"
         android:ellipsize="end"
         android:singleLine="true"
@@ -42,8 +41,6 @@
         android:id="@+id/movie_genre"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/spacing4x"
-        android:layout_marginEnd="@dimen/spacing4x"
         android:layout_marginBottom="@dimen/spacing4x"
         android:ellipsize="end"
         android:singleLine="true"

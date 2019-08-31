@@ -1,7 +1,6 @@
 package com.movie.domain
 
 import com.movie.domain.features.genres.GetGenresUseCase
-import com.movie.domain.features.home.GetMediaListUseCase
 import com.movie.domain.system.MemoryStore
 import com.movie.domain.system.Store
 import org.koin.core.qualifier.Qualifier
@@ -13,7 +12,6 @@ val domain = module {
 
     //region Use Cases
     factory { GetGenresUseCase(get(), get(MemoryStoreQualifier)) }
-    factory { GetMediaListUseCase(get(), get()) }
 
     //endregion
 

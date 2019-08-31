@@ -1,10 +1,9 @@
 package com.movie.domain.features.home
 
-import com.movie.domain.entities.Genre
-import com.movie.domain.entities.MediaRaw
+import com.movie.domain.entities.Media
 
 interface MediaHomeRepository {
 
-    suspend fun getMediaList(): List<MediaRaw>
+    suspend fun getMediaList(): List<Media>
 
 }
